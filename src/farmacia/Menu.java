@@ -22,7 +22,7 @@ public class Menu {
 		float preco;
 
 		// criação de produtos
-		System.out.println("Criar Produto\n\n");
+		System.out.println("Criar Produto\n");
 
 		Medicamento m1 = new Medicamento(147, "Advil", 1, 23.98f, "Genérico");
 		produtos.criarProduto(m1);
@@ -125,16 +125,14 @@ public class Menu {
 				System.out.println("Atualizar Produto\n\n");
 
 				System.out.println("Digite o ID do Produto: ");
-				numero = leia.nextInt();
+				id = leia.nextInt();
 
-				var buscaProduto = produtos.buscarNaCollection(numero);
+				var buscaProduto = produtos.buscarNaCollection(id);
 
 				if (buscaProduto != null) {
 
 					tipo = buscaProduto.getTipo();
 
-					System.out.println("Digite o ID do Produto: ");
-					id = leia.nextInt();
 					System.out.println("Digite o Nome do Produto: ");
 					leia.skip("\\R?");
 					nome = leia.nextLine();
